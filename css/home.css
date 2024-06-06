@@ -5,6 +5,8 @@
 body {
   padding: 0;
   margin: 0;
+  height: 90vh;
+  width: 100vw;
 
   font-family: "Montserrat", sans-serif;
   color: aliceblue;
@@ -15,7 +17,7 @@ body {
   width: 10px;
 }
 
-/* Track */
+/* Track sss*/ 
 ::-webkit-scrollbar-track {
   background: #060d1b;
 }
@@ -31,10 +33,10 @@ body {
   background: #4f6490;
 }
 
-.container {
+.principal {
   padding: 2.4rem;
   display: flex;
-  height: 100vh;
+  height: 100%;
 
   flex-direction: column;
 
@@ -63,8 +65,16 @@ main {
   flex: 1;
   padding: 80px;
 }
+
+#titulo-escondido {
+  display: none;
+  color: aliceblue;
+  text-transform: uppercase;
+}
+
 .video {
   border-radius: 16px;
+  width: 100%;
 }
 
 .right-content {
@@ -107,6 +117,7 @@ main {
 .icon {
   font-weight: 600;
   text-transform: uppercase;
+  background-color: transparent;
 
   border-radius: 999px;
   padding: 20px;
@@ -117,6 +128,17 @@ main {
   margin-left: 10px;
 
   border: 1px solid rgba(148, 152, 156, 0.2);
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.iconIntegrantes {
+  font-size: 1.5rem;
+}
+
+.iconIntegrantes:hover {
+  background-color: rgba(17, 25, 40, 0.75);
+  transition: 0.2s;
 }
 
 .icons a {
@@ -135,4 +157,104 @@ main {
   text-decoration: none;
   color: aliceblue;
   font-weight: bold;
+}
+
+#integrantes {
+  font-size: 2rem;
+}
+
+@media (max-width: 1326px) {
+  body {
+    height: 130vh;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  .title h1 {
+    font-size: 2rem;
+    margin-left: 0;
+  }
+
+  .left-content {
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-content__largura {
+    width: 80%;
+  }
+
+  .right-content {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
+
+@media (max-width: 860px) {
+
+  body {
+    height: 150vh;
+  }
+
+  .title {
+    width: auto;
+  }
+
+  .title h1 {
+    display: none;
+  }
+
+  .left-content {
+    padding: 50px;
+  }
+
+  .right-content {
+    padding: 50px;
+  }
+
+  #titulo-escondido {
+    display: block;
+    padding-bottom: 2rem;
+  }
+
+  .left-content__largura {
+    width: 100%;
+  }
+
+  #integrantes {
+    font-size: 1.5rem;
+  }
+
+}
+
+@media (max-width: 526px) {
+
+  .principal {
+    padding: 1rem;
+  }
+
+  .title {
+    display: none;
+  }
+
+  .left-content {
+    padding: 20px;
+  }
+
+  .right-content {
+    padding: 20px;
+  }
+
+  .icon {
+    font-size: 0.7rem;
+  }
+
 }
