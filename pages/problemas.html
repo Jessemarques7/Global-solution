@@ -40,12 +40,21 @@
             ><i class="fa-solid fa-book"></i> estudos</a
           >
         </div>
-        <div class="icon">
-          <a href="/index.html"><i class="fa-solid fa-bars"></i></a>
+        <div class="icon menu-opener" onclick="menuOpener()">
+          <i class="fa-solid fa-bars"></i>
         </div>
       </div>
+      <div class="menu">
+        <nav>
+          <ul>
+            <li class="active"><a href="/index.html">Home</a></li>
+            <li><a href="/index.html">Project</a></li>
+            <li><a href="/pages/problemas.html">Problemas</a></li>
+            <li><a href="/pages/estudos.html">Estudos</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
-
     <div class="container">
       <div class="mainContainer">
         <h2 class="mainTitlePage">Problemas</h2>
@@ -157,5 +166,14 @@
       </div>
     </div>
     <footer>🌎 Por um futuro mais azul...</footer>
+    <script type="text/javascript">
+      function menuOpener() {
+        if (document.querySelector(".menu nav").style.display == "flex") {
+          document.querySelector(".menu nav").style.display = "none";
+        } else {
+          document.querySelector(".menu nav").style.display = "flex";
+        }
+      }
+    </script>
   </body>
 </html>
