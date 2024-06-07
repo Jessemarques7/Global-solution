@@ -61,6 +61,9 @@ main {
 .left-content {
   padding: 100px;
 }
+.left-content img {
+  width: 40vw;
+}
 .video {
   border-radius: 16px;
 }
@@ -134,6 +137,21 @@ main {
 .titlePage {
   font-size: 4rem;
   margin: 10px;
+
+  background: -webkit-linear-gradient(
+    120deg,
+    rgb(153, 219, 208) 34%,
+    rgb(103, 176, 213) 63%,
+    rgb(80, 147, 202) 100%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitlesPage {
+  font-size: 2rem;
+  margin: 10px;
+  margin-left: -05px;
 
   background: -webkit-linear-gradient(
     120deg,
