@@ -36,7 +36,6 @@ body {
 .principal {
   padding: 2.4rem;
   display: flex;
-  /* height: 100%; */
 
   flex-direction: column;
 
@@ -50,6 +49,10 @@ body {
 }
 
 main {
+  display: flex;
+}
+
+.mainContainer {
   border-radius: 16px;
 
   backdrop-filter: blur(16px) saturate(180%);
@@ -57,8 +60,6 @@ main {
   background-color: rgba(17, 25, 40, 0.75);
 
   border: 1px solid rgba(255, 255, 255, 0.125);
-
-  display: flex;
 }
 
 .left-content {
@@ -209,6 +210,14 @@ main {
 
 .iconContainer {
   margin-top: 35px;
+  color: aliceblue;
+}
+
+footer {
+  background-color: #060d1b;
+  color: aliceblue;
+  text-align: center;
+  padding: 10px;
 }
 
 @media (max-width: 1326px) {

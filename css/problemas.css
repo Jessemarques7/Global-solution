@@ -47,6 +47,10 @@ body {
 }
 
 main {
+  display: flex;
+}
+
+.mainContainer {
   border-radius: 16px;
 
   backdrop-filter: blur(16px) saturate(180%);
@@ -54,8 +58,6 @@ main {
   background-color: rgba(17, 25, 40, 0.75);
 
   border: 1px solid rgba(255, 255, 255, 0.125);
-
-  display: flex;
 }
 
 .left-content {
@@ -149,4 +151,29 @@ main {
   );
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.mainTitlePage {
+  font-size: 4rem;
+  margin: 10px;
+
+  text-align: center;
+
+  background: -webkit-linear-gradient(
+    120deg,
+    rgb(153, 219, 208) 34%,
+    rgb(103, 176, 213) 63%,
+    rgb(80, 147, 202) 100%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  margin-top: 60px;
+}
+
+footer {
+  background-color: #060d1b;
+  color: aliceblue;
+  text-align: center;
+  padding: 10px;
 }
