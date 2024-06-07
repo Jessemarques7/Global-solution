@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../assets/logo.jpeg" type="image/x-icon" />
+    <title>Agradecimentos</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="title">
+        <a href="/index.html"><img src="../assets/logo.jpeg" alt="Logo" width="100px" /></a>
+        <h1>Ocean Guard</h1>
+      </div>
+      <div class="icons">
+        <div class="icon">
+          <a href="../index.html"><i class="fa-solid fa-house"></i> home</a>
+        </div>
+        <div class="icon">
+          <a href="../pages/problemas.html"><i class="fa-brands fa-researchgate"></i> problemas</a>
+        </div>
+        <div class="icon">
+          <a href="../pages/estudos.html"><i class="fa-solid fa-book"></i> estudos</a>
+        </div>
+        <div class="icon menu-opener" onclick="menuOpener()">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+      <div class="menu">
+        <nav>
+          <ul>
+            <li class="active"><a href="/index.html">Home</a></li>
+            <li><a href="/pages/projeto.html">Project</a></li>
+            <li><a href="/pages/problemas.html">Problemas</a></li>
+            <li><a href="/pages/estudos.html">Estudos</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="principal">
+      <div class="mainContainer">
+        <div class="container mt-5">
+          <div class="container text-white">
+            <div class="row">
+              <div class="col-md-6 offset-md-3">
+                <div class="alert alert-success" role="alert">
+                  <p id="mensagemAgradecimento"></p>
+                </div>
+                <a href="/index.html" class="btn btn-primary">Voltar para a Home</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>🌎 Por um futuro mais azul...</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      document.addEventListener('DOMContentLoaded', function() {
+        const nome = localStorage.getItem('nome');
+        const quantia = localStorage.getItem('quantia');
+
+        if (nome && quantia) {
+          document.getElementById('mensagemAgradecimento').textContent = `Obrigado, ${nome}! A sua doação de R$${quantia} foi recebida com sucesso.`;
+        } else {
+          document.getElementById('mensagemAgradecimento').textContent = 'Valores não encontrados. Por favor, volte e preencha o formulário novamente.';
+        }
+      });
+
+      function menuOpener() {
+        const navMenu = document.querySelector(".menu nav");
+        if (navMenu.style.display == "flex") {
+          navMenu.style.display = "none";
+        } else {
+          navMenu.style.display = "flex";
+        }
+      }
+    </script>
+  </body>
+</html>
