@@ -59,7 +59,6 @@ main {
 }
 
 .left-content {
-  flex: 1;
   padding: 100px;
 }
 .video {
@@ -67,7 +66,6 @@ main {
 }
 
 .right-content {
-  flex: 1;
   padding: 80px;
 }
 
